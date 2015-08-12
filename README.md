@@ -1,6 +1,9 @@
 # MaleaeGenomics
+
 Jeff DaCosta (jdacosta at oeb.harvard.edu)
+
 Levi Yant (lyant at oeb.harvard.edu)
+
 Sarah Mathews (smathews at oeb.harvard.edu)
 
 This repository contains commands, scripts, and other material used for the project "Comparative genomics of a species radiatio: sequencing the apple tribe." Material will be updated periodically, and raw data will be available upon publication.
