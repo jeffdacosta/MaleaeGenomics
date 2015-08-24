@@ -1,0 +1,3 @@
+This directory contains SLURM scripts and dependancy files that were used for de novo assemblies in AllPaths-LG. Assemblies were created on the "bigmem" partition of the Harvard Odyssey computer cluster, which contains nodes with 64 cores and 513 GB of RAM.
+
+The first step is to create dependancy lib and group files that contain details on the sequenced libraries. These are used by AllPaths-LG (script: PrepareAllPathsInputs.pl) to prep the data for assembly. The command line for prepping the data is contained in the PrepAllPaths.sh SLURM file. The assembly is then launched in AllPaths-LG (command: RunAllPathsLG), and the command line for this is contained in RunAllPaths.sh
