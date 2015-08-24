@@ -1,0 +1,3 @@
+library_name,project_name,organism_name,type,paired,frag_size,frag_stddev,insert_size,insert_stddev,read_orientation,genomic_start,genomic_end
+Nextera,ioensisAP,ioensis,fragment,1,200,100,,,inward,,
+MP3000,ioensisAP,ioensis,jumping,1,,,3000,1000,outward,,
