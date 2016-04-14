@@ -5,13 +5,11 @@ import os, sys, argparse, subprocess
 print()
 
 #create variables that can be entered as arguments in command line
-parser = argparse.ArgumentParser(description='This script uses the GATK functions RealignerTargetCreator and IndelRealigner to perform local realignment of bam files in regions with a large
- number of '+
-'mismatches, which is usually around indels. It searches for files ending in dedupNamed.bam in the input directory, and a separate slurm shell script is created and sent to Odyssey for each
- input file. '+
-' One IndelRealigner.intervals, realigned.bam, and realigned.bam.bai file is generated in the output direcotry for each input file. ')
+parser = argparse.ArgumentParser(description='This script uses the GATK function UnifiedGenotyper to call SNPs and indels on a per-locus basis. '+
+'It gathers samples by searching for files ending in realigned.bam in the input directory, and a single slurm shell script is created and sent '+
+'to Odyssey. One output (see required -o and -vcf options) vcf file is generated.')
 
-parser.add_argument('-i', type=str, metavar='inputdir_path', required=True, help='REQUIRED: Full path to directory with input fastq files')
+parser.add_argument('-i', type=str, metavar='inputdir_path', required=True, help='REQUIRED: Full path to directory with input bam files')
 parser.add_argument('-o', type=str, metavar='outputdir_path', required=True, help='REQUIRED: Full path to directory for output vcf file')
 parser.add_argument('-vcf', type=str, metavar='vcf_filename', required=True, help='REQUIRED: Name for output vcf file')
 parser.add_argument('-ref', type=str, metavar='reference_path', required=True, help='REQUIRED: Full path to reference genome')
