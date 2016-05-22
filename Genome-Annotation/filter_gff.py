@@ -60,7 +60,7 @@ if type == 'standard':
                 parent = parent[1].split(';')[0]
                 parent_list.append(parent)
             else:
-                if 'Dbxref=' in data[8]:
+                if 'Dbxref=' in line:
                     parent = data[8].split('Parent=')
                     parent = parent[1].split(';')[0]
                     parent_list.append(parent)                    
@@ -108,12 +108,12 @@ if type == 'standard-us':
                 parent = parent[1].split(';')[0]
                 parent_list.append(parent)
             else:
-                if 'Dbxref=' in data[8]:
+                if 'Dbxref=' in line:
                     parent = data[8].split('Parent=')
                     parent = parent[1].split(';')[0]
                     parent_list.append(parent)                    
                 else:
-                    if 'Note=Similar' in data[8]:
+                    if 'Note=Similar' in line:
                         parent = data[8].split('Parent=')
                         parent = parent[1].split(';')[0]
                         parent_list.append(parent)
